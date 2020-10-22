@@ -10,7 +10,7 @@
       <div id="results"></div>
     <script>
       // client code here
-      var socket = io.connect('http://192.168.100.92:5000');
+      var socket = io.connect('https://socket-duongnv.herokuapp.com');
 
       socket.on('connect', function() {
         document.getElementById("connect").innerHTML = "Connect to socket";
