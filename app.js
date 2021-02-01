@@ -10,12 +10,6 @@ app.get('/', function (req, res) {
 //Whenever someone connects this gets executed
 io.on('connection', function (socket) {
    console.log('A user connected');
-   // var token = socket.request._query
-   // console.log("=======================>>>> token: ", token.auth_token);
-   // console.log("=======================>>>> idClient: ", socket.id);
-   // // if (token.auth_token == undefined) {
-   //    io.sockets.sockets[socket.id].disconnect();
-   // }
 
    socket.on('message_client', function (data) {
       io.emit('message_server', data);
