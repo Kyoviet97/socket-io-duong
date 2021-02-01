@@ -12,6 +12,7 @@ io.on('connection', function (socket) {
    console.log('A user connected');
 
    socket.on('message_client', function (data) {
+      console.log("========================data: ", data)
       io.emit('message_server', data);
    });
 
