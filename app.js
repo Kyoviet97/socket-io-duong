@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 
 //Whenever someone connects this gets executed
 io.on('connection', function (socket) {
-   console.log('A user connected');
+   console.log('==================== A user connected');
 
    socket.on('message_client', function (data) {
       console.log("========================data: ", data)
